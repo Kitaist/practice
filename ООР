@@ -1,0 +1,26 @@
+class Car:
+    name = "None"
+    weight = 0
+
+    def __init__(self, name, weight):
+        self.name = name
+        self.weight = weight
+        print(self.name, " has weight ", self.weight)
+
+
+audi = Car("Audi", 1450)
+
+skoda = Car("Skoda", 2350)
+
+
+class Truck(Car):
+    wheels = 0
+
+    def __init__(self, name, weight, wheels):
+        super().__init__(name, weight)
+        self.wheels = wheels
+
+
+man = Truck("Man", 4550, 12)
+man.wheels = 12
+print(man.name, " has weight ", man.weight, " has wheels ", man.wheels)
